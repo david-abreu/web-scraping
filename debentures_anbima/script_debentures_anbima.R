@@ -13,7 +13,7 @@ carregar_debentures = function(dt){
                      stringsAsFactors = FALSE, # não converter textos para fatores
                      header = TRUE, # há cabeçalho 
                      sep = "@", # identificando o separador
-                     dec= ",",  #  identificando o decimal
+                     dec= ".",  #  identificando o decimal
                      na.string = c( "--","N/D"), #identifica como NA tais caracteres
                      skip = 2, # pular as primeiras n linhas
                      fill = TRUE) # preencher como NAs quando não houver colunas
@@ -29,9 +29,11 @@ carregar_debentures = function(dt){
 
 
 # Exemplo
-dados = carregar_debentures(as.Date("2021-05-24"))
+dados = carregar_debentures(as.Date("2021-05-21"))
 
 
 dados
+
+
 
 
